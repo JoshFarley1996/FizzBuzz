@@ -11,35 +11,60 @@
 
  
         string output = "";
-              
+        string buzz = "";
+        string fizz = "";
+        string fuzz = "";
+
+
         // enter loop at 0 till 100 every time it loops +1 to number
-        for (int number = 1; number <= 100; number++) 
+        for (int number = 1; number <= 100; number++)
         {
+            //Make 3 different if else statements to print Fuzz Buzz Bizz when the give number is divisible by 3 5 7
 
+            //when number is divisible by 3 print Buzz. When number is not divisible by 3 print the number
 
-            //when number is divided by 5 buzz will output buzz and fizz will output blank
-            if (number % 5 == 0 && number % 3 != 0) 
-            {               
-                output = "Buzz";
-            }
-            //when number is divided by 3 fizz will output fizz and buzz will out put blank
-            if (number % 3 == 0 && number % 5 != 0)  
-            {             
-                output = "Fuzz";
-            }
-            //when divisible by both 3 and 5 output fizzbuzz
-            if (number % 5 == 0 && number % 3 == 0) 
+            //Print Fizz when divisible by 5
+            if (number % 5 == 0)
             {
-                output = "FizzBuzz";
+                fizz = "Fizz";
             }
-            //when number is not divisible by 5 or 3 output the number
-            if (number % 3 != 0 && number % 5 != 0) 
+            else
+            {
+                fizz = "";
+            }
+
+            //Print Buzz when divisible by 3
+            if (number % 3 == 0)
+            {
+                buzz = "Buzz";
+            }
+            else
+            {
+                buzz = "";
+            }
+
+            //Print Buzz when divisible by 3
+            if (number % 7 == 0)
+            {
+                fuzz = "Fuzz";
+            }
+            else
+            {
+                fuzz = "";
+            }
+
+            //Print number when not divisible by 3 5 or 7
+            if (number % 3 != 0 && number % 5 != 0 && number % 7 !=0) 
             {
                 output = Convert.ToString(number);
             }
+            else
+            {
+                output = "";
+            }
 
             //output the saved value for each string
-            Console.WriteLine(output);
+            Console.WriteLine($"{fizz}{buzz}{fuzz}{output}");
 
         }
         
