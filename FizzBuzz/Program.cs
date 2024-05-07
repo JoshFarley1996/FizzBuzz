@@ -17,12 +17,12 @@
 
 
         // enter loop at 0 till 100 every time it loops +1 to number
-        for (int number = 1; number <= 105; number++)
+        for (int number = 1; number <= 100; number++)
         {
             //Make 3 different if else statements to print Fuzz Buzz Bizz when the give number is divisible by 3 5 7
                         
-            //Print Fizz when divisible by 5
-            if (number % 5 == 0)
+            //Print Fizz when divisible by 3
+            if (number % 3 == 0)
             {
                 fizz = "Fizz";
             }
@@ -31,8 +31,8 @@
                 fizz = "";
             }
 
-            //Print Buzz when divisible by 3
-            if (number % 3 == 0)
+            //Print Buzz when divisible by 5
+            if (number % 5 == 0)
             {
                 buzz = "Buzz";
             }
