@@ -10,59 +10,40 @@
         // 5) if the number is divisible by 7 print Bizz instead of a number
 
  
-        string output = "";
-        string buzz = "";
-        string fizz = "";
-        string bizz = "";
-
+     
 
         // enter loop at 0 till 100 every time it loops +1 to number
         for (int number = 1; number <= 100; number++)
         {
-            //Make 3 different if else statements to print Fuzz Buzz Bizz when the give number is divisible by 3 5 7
-                        
+            //Reset the value of output for each instance of the loop
+            string output = "";
+
             //Print Fizz when divisible by 3
             if (number % 3 == 0)
             {
-                fizz = "Fizz";
-            }
-            else
-            {
-                fizz = "";
+                output += "Fizz";
             }
 
             //Print Buzz when divisible by 5
             if (number % 5 == 0)
             {
-                buzz = "Buzz";
-            }
-            else
-            {
-                buzz = "";
+                output += "Buzz";
             }
 
             //Print Bizz when divisible by 7
             if (number % 7 == 0)
             {
-                bizz = "Bizz";
-            }
-            else
-            {
-                bizz = "";
+                output += "Bizz";
             }
 
             //Print number when not divisible by 3 5 or 7
-            if (number % 3 != 0 && number % 5 != 0 && number % 7 !=0) 
+            if (output == "") 
             {
                 output = Convert.ToString(number);
             }
-            else
-            {
-                output = "";
-            }
 
             //output the saved value for each string
-            Console.WriteLine($"{fizz}{buzz}{bizz}{output}");
+            Console.WriteLine(output);
 
         }
         
